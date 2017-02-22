@@ -1,0 +1,42 @@
+﻿@model ILikeApp.Models.ViewModel
+
+<header>
+    <div class="login">
+        <h1>login in with</h1>
+        <ul>
+            @using (Html.BeginForm("VkontakteLogin", "Account"))
+            {
+                <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+                @*<li><a href="#"submit"><img src="~/Images/vk.png" alt="/"></a></li>*@
+                <li><button style="background-image: url('/Images/vk.png'); width: 24px; height: 24px; border: 0px; cursor: pointer; background-color: transparent; background-size:100%; border-color:transparent" type="submit"></button></li>
+            }
+
+            <li><a href="#"><img src="~/Images/fb.png" alt="/"></a></li>
+            <li><a href="#"><img src="~/Images/ig.png" alt="/"></a></li>
+            <li><a href="#"><img src="~/Images/tw.png" alt="/"></a></li>
+        </ul>
+    </div>
+</header>
+@if(Request.IsAuthenticated)
+{  
+    <section class="section_1">
+        <div class="top_this_section">
+            <div class="tTS_bg_img"><img src="@Model.photo" style="border-radius:25px;" alt="/"></div>
+            <div class="tTS_content">
+                <h2>@Model.first_name @Model.last_name</h2>
+                @Html.ActionLink("SignOut", "Logout", "Account", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </section>
+}
+
+else
+{
+    <section class="section_1">
+        <div class="top_this_section">
+            <div class="tTS_content">
+                <p>Log in via Social Network</p>
+            </div>
+        </div>
+    </section>
+}

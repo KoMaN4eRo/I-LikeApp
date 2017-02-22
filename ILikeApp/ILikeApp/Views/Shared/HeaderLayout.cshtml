@@ -1,0 +1,25 @@
+﻿@using System.Web
+@model ILikeApp.JsonModels.Rootobject 
+@{
+    ViewBag.Title = "Main";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROJECT</title>
+    <link rel="stylesheet" href="~/Content/main.css">   
+    <link rel="stylesheet" href="~/Content/reset.css">
+    <link rel="stylesheet" href="~/Content/css.css">
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/Main.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+</head>
+<body>    
+        @if (true)
+        {
+            Html.RenderAction("PartialHeader", Model);
+        }
+    @RenderBody()
+</body>
+</html>

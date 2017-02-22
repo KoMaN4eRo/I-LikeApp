@@ -1,0 +1,35 @@
+* {box-sizing: border-box;}
+.section_Slider{margin-top: 25px; width: 100%; height: auto; padding-top: 25px;display: flex;}
+.slider{text-align: center; border: 1px solid green; width: 700px; margin: auto; padding: 25px 0 15px 0; margin-top: 0;}
+.slides{border: 1px solid black;display: flex;flex-wrap: wrap;width: 380px;margin: auto;height: 215px;
+    justify-content: flex-start;padding: 5px;overflow: hidden;}
+.prev, .next{margin: 10px; display: inline-block;cursor: pointer;}
+.slides > div {border: 1px solid black;padding: 12px 0;margin: 5px; width: 80px; display: none; height: 92px;}
+.slides > div > a{display: flex;flex-direction: column;align-items: center; cursor: pointer;}
+.slides > div > a > img{width: 45px;height: 45px;margin-bottom: 5px;}
+.slides > div > a > span{margin: 0 3px;}
+
+.slider > input{width: 380px;height: 30px;margin: 30px auto 30px auto; padding: 0 10px; outline: none;}
+
+.more-info{padding-bottom: 20px; margin: auto; width: 300px; border: 1px solid grey; height: auto; margin-left: 0;}
+.more-info--obgImg{width: 100%; height: 300px; display: flex;}
+.more-info--obgImg > img{width: 100%;}
+.more-info > .info{padding: 10px 5px; margin-bottom: 15px; text-align: center;}
+.more-info > .confirm{width: 100px; height: 50px; border: 1px solid lightgreen; display: flex; margin: auto; justify-content: center; align-items: center; text-transform: uppercase;}
+
+/* ------------------ */
+body{width: 100%; max-width: 1366px;}
+a{text-decoration: none;}
+/*nav{height: auto; margin: 20px;max-width: 1366px;}
+nav > ul{max-width: 700px;height: auto;display: flex; margin: auto !important;}
+nav > ul > li{border: 1px solid grey; height: auto; flex: 1 1; text-align: center;}
+nav > ul > li > a{display: flex; padding: 5px 15px; justify-content: center;}
+
+@media all and (max-width: 600px) {
+	nav > ul{flex-wrap: wrap; justify-content: flex-start;}
+	nav > ul > li{flex: 0 1 50%;}
+}
+
+@media all and (max-width: 400px) {
+	nav > ul > li{flex-basis: 100%;}
+}  */

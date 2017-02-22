@@ -1,0 +1,11 @@
+﻿@using ILikeApp.Models
+@model ViewModel
+@{
+    Layout = "~/Views/Shared/HeaderLayout.cshtml";
+}
+
+@if (Request.IsAuthenticated)
+{
+    Html.RenderAction("UserCredits", Model);
+}
+

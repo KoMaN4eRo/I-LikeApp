@@ -1,0 +1,118 @@
+﻿@using ILikeApp.JsonModels
+@model ILikeApp.JsonModels.Rootobject
+@{
+    Layout = "~/Views/Shared/HeaderLayout.cshtml";
+}
+
+<div class="section_Slider">
+    <div class="content">
+        <div class="content_bg">
+            <ul class="leftSearch" id="RefreshArea">
+                <li class="first">
+                    <input type="text" placeholder="Search...">
+                    <img src="~/Images/search.png" alt="/">
+                </li>
+                    @for (var i = 0; i < @Model.response.items.Length; i++)
+                    {
+                        <li>
+                            <div class="lS_img_bg">
+                                <img src="@Model.response.items[i].photo_50" alt="/">
+                                <img class="online" src="~/Images/circle.png" alt="/">
+                            </div>
+                            <div>
+                                <h3>@Model.response.items[i].first_name @Model.response.items[i].last_name</h3>
+                                <p>48 friends, 568 followers</p>
+                            </div>
+                        </li>
+                    }
+            </ul>
+
+            <script type="text/javascript">
+                $("#btnMessage").click(function () {
+                        //обращаемся к методу Index и передаем параметр "chatMessage"
+                    //var href = "/Account";
+                    console.log("Hello");
+                        $("#ActionLink").click();
+                });
+                function OnbtnClick()
+                {
+                    console.log("Hello");
+                    $("#ActionLink").click();
+                }
+            </script>
+
+            @Ajax.ActionLink("ActionLink", "GetUsersGroup", null,new AjaxOptions { UpdateTargetId = "RefreshArea"}, new { @id = "ActionLink", @style = "visibility:hidden;" })
+            <div class="rightInfo">
+                <ul>
+                    <li><a href="#" onclick="FriendsClick()">Friends</a></li>
+                    <li><a href="#" onclick="GroupsClick()">Groups</a></li>
+                    <li><a href="#" onclick="FollewersClick()">Followers</a></li>
+                    
+                </ul>
+                @*<ul class="mainCont">
+                    <li>
+                        <div class="mC_img_bg"><img src="~/Images/Слой 3.png" alt="/"></div>
+                        <div class="mC_info_right">
+                            <p><span>кпи</span>live<a href="#"><img src="~/Images/Слой 16.png" alt="/"></a></p>
+                            <p>
+                                <a href="#"><img src="~/Images/ic_favorite_black_24dp.png" alt="/"></a><span>25</span>
+                                <a href="#"><img src="~/Images/Слой 15.png" alt="/"></a><span>10</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mC_img_bg"><img src="~/Images/Слой 3.png" alt="/"></div>
+                        <div class="mC_info_right">
+                            <p><span>кпи</span>live<a href="#"><img src="~/Images/Слой 16.png" alt="/"></a></p>
+                            <p>
+                                <a href="#"><img src="~/Images/ic_favorite_black_24dp.png" alt="/"></a><span>25</span>
+                                <a href="#"><img src="~/Images/Слой 15.png" alt="/"></a><span>10</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mC_img_bg"><img src="~/Images/Слой 3.png" alt="/"></div>
+                        <div class="mC_info_right">
+                            <p><span>кпи</span>live<a href="#"><img src="~/Images/Слой 16.png" alt="/"></a></p>
+                            <p>
+                                <a href="#"><img src="~/Images/ic_favorite_black_24dp.png" alt="/"></a><span>25</span>
+                                <a href="#"><img src="~/Images/Слой 15.png" alt="/"></a><span>10</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mC_img_bg"><img src="~/Images/Слой 3.png" alt="/"></div>
+                        <div class="mC_info_right">
+                            <p><span>кпи</span>live<a href="#"><img src="~/Images/Слой 16.png" alt="/"></a></p>
+                            <p>
+                                <a href="#"><img src="~/Images/ic_favorite_black_24dp.png" alt="/"></a><span>25</span>
+                                <a href="#"><img src="~/Images/Слой 15.png" alt="/"></a><span>10</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mC_img_bg"><img src="~/Images/Слой 3.png" alt="/"></div>
+                        <div class="mC_info_right">
+                            <p><span>кпи</span>live<a href="#"><img src="~/Images/Слой 16.png" alt="/"></a></p>
+                            <p>
+                                <a href="#"><img src="~/Images/ic_favorite_black_24dp.png" alt="/"></a><span>25</span>
+                                <a href="#"><img src="~/Images/Слой 15.png" alt="/"></a><span>10</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mC_img_bg"><img src="~/Images/Слой 3.png" alt="/"></div>
+                        <div class="mC_info_right">
+                            <p><span>кпи</span>live<a href="#"><img src="~/Images/Слой 16.png" alt="/"></a></p>
+                            <p>
+                                <a href="#"><img src="~/Images/ic_favorite_black_24dp.png" alt="/"></a><span>25</span>
+                                <a href="#"><img src="~/Images/Слой 15.png" alt="/"></a><span>10</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>*@
+            </div>
+        </div>
+    </div>
+
+</div>
